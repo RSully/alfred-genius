@@ -18,5 +18,5 @@ function run(argv) {
     
     // Easy to add more applications here
     
-    return null;
+    return '';
 }
