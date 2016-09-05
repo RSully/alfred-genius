@@ -11,8 +11,8 @@ function run(argv) {
 
     if (Application('com.coppertino.Vox').running()) {
         var vox = Application('com.coppertino.Vox');
-        if (vox.playerState === 1) {
-            return vox.track + ' ' + vox.artist;
+        if (vox.playerState() === 1) {
+            return vox.track() + ' ' + vox.artist();
         }
     }
     
