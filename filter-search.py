@@ -3,6 +3,7 @@
 import sys, os
 import requests
 import json
+from urllib.parse import urlparse
 
 def main(argv):
     query = argv[1]
@@ -24,11 +25,17 @@ def main(argv):
 
         hit_result = hit['result']
 
+        # At the moment Genius is not returning secure URLs
+        # Also, at the moment these HTTPS urls all redirect back to HTTP
+        # so this is kind of useless. But hopefully that changes.
+        hit_url = urlparse(hit_result['url'])._replace(scheme='https').geturl()
+
         alfred_items.append({
+            "uid": 'https://api.genius.com{}'.format(hit_result['api_path']),
             "title": hit_result['title'],
             "subtitle": hit_result['primary_artist']['name'],
-            "arg": hit_result['url'],
-            "quicklookurl": hit_result['url']
+            "arg": hit_url,
+            "quicklookurl": hit_url
         })
 
     print(json.dumps({
