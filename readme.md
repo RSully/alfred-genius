@@ -1,7 +1,9 @@
-This is an Alfred 3 workflow to search Genius for lyrics. By default it will 
+This is an Alfred 3 workflow to search Genius for lyrics. By default it will
 search for the currently playing track.
 
-This workflow is *not* particularly easy for end-users to install. 
+![example usage](https://user-images.githubusercontent.com/185004/55562690-7fd7bd00-56c2-11e9-9505-8fa9f217fc52.gif)
+
+This workflow is *not* particularly easy for end-users to install.
 You will need to install Python 3 and register with Genius for an API token.
 If you think Python is a type of snake this might not be for you.
 
@@ -9,7 +11,7 @@ If you think Python is a type of snake this might not be for you.
 
 ### Prep:
 
-You'll need a Python 3 install with the `requests` package. 
+You'll need a Python 3 install with the `requests` package.
 
 I used [conda][conda install] for this:
 
