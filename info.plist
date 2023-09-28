@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.genius.3rdparty.alfred</string>
+	<string>me.rsullivan.apps.alfred-genius</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
@@ -62,36 +62,15 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>rsully</string>
 	<key>description</key>
-	<string>Search Genius</string>
+	<string>Search genius.com from Alfred</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Genius</string>
+	<string>Search Genius Lyrics</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>genius</string>
-				<key>subtext</key>
-				<string>Currently playing song</string>
-				<key>text</key>
-				<string>Search Genius</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>22E7BC20-2310-4515-B30C-F63A980D2A1B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -118,10 +97,35 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>genius</string>
+				<key>subtext</key>
+				<string>Currently playing song</string>
+				<key>text</key>
+				<string>Search Genius</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>22E7BC20-2310-4515-B30C-F63A980D2A1B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
 				<string>(\n)</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
 				<key>replacestring</key>
 				<string></string>
 			</dict>
@@ -130,13 +134,19 @@
 			<key>uid</key>
 			<string>2892114B-1514-4872-80F0-50206EE99F38</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
@@ -173,7 +183,7 @@
 			<key>uid</key>
 			<string>5232F6A2-29BE-4FF2-9948-CD164A4811D7</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -243,8 +253,8 @@
 		<string></string>
 	</dict>
 	<key>version</key>
-	<string></string>
+	<string>1.0</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/rsully/alfred-genius</string>
 </dict>
 </plist>
