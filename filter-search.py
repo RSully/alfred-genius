@@ -30,6 +30,11 @@ def main(argv):
         # so this is kind of useless. But hopefully that changes.
         hit_url = urlparse(hit_result['url'])._replace(scheme='https').geturl()
 
+        # Use the old song page (I just really don't like the new song page design.
+        # yes I've filled out their feedback form documenting my complaints)
+        hit_url += "&" if '?' in hit_url else "?"
+        hit_url += "bagon=1"
+
         alfred_items.append({
             "uid": 'https://api.genius.com{}'.format(hit_result['api_path']),
             "title": hit_result['title'],
