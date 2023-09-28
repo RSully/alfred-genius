@@ -15,7 +15,7 @@ You'll need a Python 3 install with the `requests` package.
 
 I used [conda][conda install] for this:
 
-    conda create -n alfred-genius python=3.5 requests
+    conda create -n alfred-genius python=3 requests
 
 But feel free to use python3 from Homebrew or something else.
 
@@ -23,6 +23,10 @@ But feel free to use python3 from Homebrew or something else.
 
 - Set the `PATH` var for this workflow to your Python bin
 - Set the `GENIUS_TOKEN` var to your Genius [API token][genius api]
+
+### Add to Alfred 5
+
+    ln -s path/to/alfred-genius "~/Library/Application Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.alfred-genius"
 
 ***
 
