@@ -38,9 +38,9 @@ def main(argv):
         alfred_items.append({
             "uid": 'https://api.genius.com{}'.format(hit_result['api_path']),
             "title": hit_result['title'],
-            "subtitle": hit_result['primary_artist']['name'],
+            "subtitle": hit_result['primary_artist_names'],
             "arg": hit_url,
-            "quicklookurl": hit_url
+            "quicklookurl": hit_url,
         })
 
     print(json.dumps({
