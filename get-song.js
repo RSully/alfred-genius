@@ -20,7 +20,7 @@ function run(argv) {
                 return track.name() + ' ' + track.artist();
             }
         }
-    } catch (err) { /* user on catalina */ }
+    } catch (err) { /* user on catalina or later */ }
 
     try {
         if (Application('com.coppertino.Vox').running()) {
